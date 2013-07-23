@@ -41,7 +41,7 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
         {   
             //setting up proxy
             WebProxy prxy1 = new WebProxy();
@@ -79,7 +79,7 @@ namespace WindowsFormsApplication3
                 }
             reader1.Close();
             response1.Close();
-        }
+        }*/
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
