@@ -1,6 +1,0 @@
-c:\users\manoj\documents\visual studio 2012\Projects\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
-c:\users\manoj\documents\visual studio 2012\Projects\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
-c:\users\manoj\documents\visual studio 2012\Projects\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
-c:\users\manoj\documents\visual studio 2012\Projects\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.csprojResolveAssemblyReference.cache
-c:\users\manoj\documents\visual studio 2012\Projects\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
-c:\users\manoj\documents\visual studio 2012\Projects\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb

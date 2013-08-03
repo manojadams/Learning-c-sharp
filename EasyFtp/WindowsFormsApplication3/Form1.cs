@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;               //for ftp
 using System.IO;
+using System.Diagnostics;
 
 namespace WindowsFormsApplication3
 {
@@ -25,7 +26,6 @@ namespace WindowsFormsApplication3
 
 
             InitializeComponent();
-
             string[] contents = { ip1, "", "", "",};
 
             try
@@ -78,12 +78,38 @@ namespace WindowsFormsApplication3
             string ip = textBox1.Text;
             string user = textBox2.Text;
             string pass = textBox3.Text;
-            
 
-            //navigating to the required ftp address
-            webBrowser1.Navigate("ftp://"+user+":"+pass+"@"+ip+"/",null,null,"Authentication : Basic"+Convert.ToBase64String(Encoding.ASCII.GetBytes(user+":"+pass))+"\r\n");
+            Regex match1 = new Regex(@"^[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$", RegexOptions.IgnoreCase);
+            Regex match2 = new Regex(@"\d{3}");
+            MatchCollection mchs = match2.Matches(ip);
+            foreach (Match mch in mchs)
+            {
+                if (Convert.ToInt32((mch.Value)) > 255)
+                {
+                    MessageBox.Show("Invalid IP Address");
+                    return;
+                }
+            }
+            if (!match1.IsMatch(ip))
+                MessageBox.Show("Invalid IP Address");
+            else
+            {
+                //navigating to the required ftp address
+                //webBrowser1.Navigate("ftp://" + user + ":" + pass + "@" + ip + "/", null, null, "Authentication : Basic" + Convert.ToBase64String(Encoding.ASCII.GetBytes(user + ":" + pass)) + "\r\n");
+                openFileDialog1.Title = "Current location";
+                openFileDialog1.InitialDirectory = "ftp://192.168.125.7";
+                openFileDialog1.
+                openFileDialog1.ShowDialog();
+            }
             
         }
+
+        private void makeCurrent(object sender, CancelEventArgs e)
+        {
+            WebBrowser dis = (WebBrowser)sender;
+            e.Cancel = true;
+            MessageBox.Show(dis.StatusText.ToString());
+        } 
 
         private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -144,6 +170,78 @@ namespace WindowsFormsApplication3
         {
             this.Close();
         }
-     
+
+        private bool isInvalid = false;
+        
+        private void texxtBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyValue == 190)
+            {
+                isInvalid = false;
+                return;
+            }
+            if((e.KeyCode != Keys.Delete) && (e.KeyCode != Keys.Tab) && ( e.KeyCode != Keys.Back ))  
+            if ((e.KeyCode < Keys.D0 || e.KeyCode > Keys.D9) && (e.KeyCode != Keys.Decimal))
+                if (e.KeyCode < Keys.NumPad0 || e.KeyCode > Keys.NumPad9)
+
+                
+                    isInvalid = true;
+            else
+                isInvalid = false;
+            else
+                isInvalid = false;
+            else
+                isInvalid = false;
+
+            return;
+        }
+        
+        //
+        //cancelling invalid characters to enter the textbox
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //e.KeyChar
+            if (!isInvalid)
+            {
+                e.Handled = false;
+                toolTip1.Hide(textBox1);
+            }
+            else
+            {
+                e.Handled = true;
+                toolTip1.Show("Invalid characters not allowed", textBox1, 10, -30);
+            }
+            
+        }
+
+        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //calling form2(settings)
+            Form2 form3 = new Form2(this);
+            form3.ShowDialog();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void ftpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

@@ -22,3 +22,11 @@ C:\Users\manoj\Documents\Visual Studio 2012\Projects\WindowsFormsApplication4\Wi
 C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\bin\Debug\EasyFtp.exe.config
 C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\obj\Debug\EasyFtp.exe
 C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\obj\Debug\EasyFtp.pdb
+C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\bin\Debug\EasyFtp.exe
+C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\bin\Debug\EasyFtp.pdb
+C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
+C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.AboutBox1.resources
+C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form1.resources
+C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form2.resources
+C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\obj\Debug\EasyFtp.Properties.Resources.resources
+C:\Users\manoj\Documents\Visual Studio 2012\Projects\EasyFtp\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
